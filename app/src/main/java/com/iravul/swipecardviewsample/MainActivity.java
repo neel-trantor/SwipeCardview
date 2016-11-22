@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.iravul.swipecardview.RecyclerViewClickListener;
 import com.iravul.swipecardview.SwipeCardAdapter;
@@ -47,5 +48,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewClick
     @Override
     public void recyclerViewListClicked(View v, int position) {
         //onclick events.
+        Toast.makeText(MainActivity.this, swipeCardModels.get(position).getTitle(), Toast.LENGTH_LONG).show();
+
     }
 }
